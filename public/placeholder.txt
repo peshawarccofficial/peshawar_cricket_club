@@ -1,0 +1,1 @@
+Add optimized team logos and player images here, or use Supabase Storage after configuring secure upload policies.

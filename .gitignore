@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+.env
+.env.local
+.vercel
+.DS_Store
+
+.vercel
+.env*
+!.env.example
+email & password.md
+*.dump
+*.backup
+*.sql.gz

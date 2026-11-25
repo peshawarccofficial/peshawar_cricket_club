@@ -1,0 +1,4 @@
+.status{display:flex;align-items:center;gap:8px;margin:0;color:var(--muted);font-size:.86rem}
+.status span{width:8px;height:8px;border-radius:50%}
+.connected{background:#25a35a;box-shadow:0 0 0 4px #25a35a20}
+.offline{background:#b68b2a}

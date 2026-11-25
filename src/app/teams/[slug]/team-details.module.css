@@ -1,0 +1,30 @@
+.profile{display:grid;gap:26px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+.teamHeader{display:flex;align-items:center;gap:18px}
+.teamHeader h2{margin:0 0 6px;color:var(--text);font-size:1.55rem}
+.teamHeader p{margin:0;color:var(--muted)}
+.teamHeader .description{margin-top:10px;max-width:70ch;line-height:1.65}
+.teamLogo,.logoFallback{width:96px;height:96px;border-radius:20px;object-fit:cover;background:var(--surface2)}
+.logoFallback{display:grid;place-items:center;color:#d4af37;font-size:1.5rem;font-weight:800}
+.captains{display:flex;flex-wrap:wrap;gap:12px}
+.captain{display:flex;align-items:center;gap:10px;min-width:220px;padding:11px;border:1px solid var(--line);border-radius:13px}
+.captain img,.captain>span{width:48px;height:48px;border-radius:50%;object-fit:cover;background:var(--surface2)}
+.captain>span{display:grid;place-items:center;color:#d4af37;font-weight:800}
+.captain div{display:grid;gap:3px}
+.captain small,.playerDetails small{color:var(--muted)}
+.captain strong{color:var(--text)}
+.rosterHeading{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:12px}
+.rosterHeading h2{margin:2px 0 0;color:var(--text)}
+.rosterHeading>span{color:var(--muted);font-size:.9rem}
+.roster{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.player{display:flex;align-items:center;gap:12px;min-width:0;padding:12px;border:1px solid var(--line);border-radius:14px;color:inherit;text-decoration:none}
+.player:hover{border-color:#d4af37}
+.playerPhoto,.playerFallback{width:58px;height:58px;flex:none;border-radius:50%;object-fit:cover;background:var(--surface2)}
+.playerFallback{display:grid;place-items:center;color:#d4af37;font-size:1.2rem;font-weight:800}
+.playerDetails{display:grid;gap:3px;min-width:0}
+.playerDetails strong{overflow:hidden;color:var(--text);text-overflow:ellipsis;white-space:nowrap}
+.playerDetails>span{color:var(--muted);font-size:.9rem}
+.playerDetails small{font-size:.76rem}
+.role{margin-left:auto;color:var(--muted);font-size:.78rem;text-align:right}
+.empty,.error{padding:18px;border-radius:12px;background:var(--surface2);color:var(--muted)}
+.error{color:#aa2b2b}
+@media(max-width:640px){.profile{padding:17px}.teamHeader{align-items:flex-start}.teamLogo,.logoFallback{width:72px;height:72px;flex:none}.roster{grid-template-columns:1fr}.player{padding:10px}.captain{min-width:100%}.role{max-width:82px}}

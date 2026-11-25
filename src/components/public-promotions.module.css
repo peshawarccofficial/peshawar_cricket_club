@@ -1,0 +1,11 @@
+.promotions{display:grid;gap:12px;margin:0 0 24px}
+.banner{position:relative;min-height:150px;border:1px solid #dfe5ef;border-radius:18px;background:linear-gradient(135deg,#071b36,#163c75);color:#fff;text-decoration:none;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,38%)}
+.copy{position:relative;z-index:2;padding:28px;align-self:center}
+.eyebrow{display:block;margin-bottom:7px;color:#f3cf67;font-size:9px;font-weight:900;letter-spacing:.12em}
+.copy h2{margin:0 0 7px;font:900 clamp(20px,3vw,34px) Manrope,sans-serif}
+.copy p{margin:0;max-width:650px;color:#dfe7f5;font-size:12px;line-height:1.6}
+.image{position:relative;min-height:150px}.image img{object-fit:cover}
+.announcementList{display:grid;gap:8px}
+.announcement{display:grid;gap:3px;padding:12px 14px;border:1px solid #e3e8ef;border-radius:12px;background:#fff;color:#172033;text-decoration:none}
+.announcement strong{font-size:12px}.announcement span{color:#758297;font-size:10px;line-height:1.5}
+@media(max-width:760px){.banner{min-height:180px;grid-template-columns:1fr}.image{position:absolute;inset:0;opacity:.18}.copy{padding:20px}.copy h2{font-size:21px}}

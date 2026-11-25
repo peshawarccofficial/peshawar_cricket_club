@@ -1,0 +1,136 @@
+.profileFields {
+  display: grid;
+  gap: 12px;
+}
+
+.profileFields > label {
+  margin-top: 3px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.profilePhotoRow {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface2);
+}
+
+.profilePhotoRow > div {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.profilePhotoRow strong {
+  overflow: hidden;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profilePhotoRow span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.profileAvatar,
+.profileAvatarFallback {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  place-items: center;
+  border: 2px solid var(--surface);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--muted);
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.photoPicker {
+  position: relative;
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 9px;
+  overflow: hidden;
+  padding: 8px 11px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.photoPicker img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.photoPicker span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.photoPicker input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.photoPicker:focus-within {
+  outline: 2px solid #bd8510;
+  outline-offset: 2px;
+}
+
+.accountDetails {
+  display: grid;
+  gap: 6px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.accountDetails p {
+  margin: 0;
+}
+
+.accountActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.signOutButton {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.signOutButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}

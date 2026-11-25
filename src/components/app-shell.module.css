@@ -1,0 +1,163 @@
+.topActions {
+  position: relative;
+}
+
+.brandLink {
+  gap: 9px;
+}
+
+.brandLogo {
+  display: block;
+  width: 48px;
+  height: 54px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.footerBrand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.footerLogo {
+  display: block;
+  width: 28px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footerLinks a {
+  color: var(--muted);
+}
+
+.footerLinks a:hover,
+.footerLinks a:focus-visible {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.accountMenu {
+  position: relative;
+}
+
+.accountToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  overflow: hidden;
+}
+
+.toggleAvatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.accountPopover {
+  position: absolute;
+  z-index: 45;
+  top: calc(100% + 10px);
+  right: 0;
+  width: min(290px, calc(100vw - 24px));
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 16px 42px rgba(5, 20, 40, 0.2);
+}
+
+.accountSummary {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  padding: 10px 9px 13px;
+}
+
+.summaryAvatar,
+.summaryAvatarFallback {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--surface2);
+  color: var(--muted);
+  object-fit: cover;
+}
+
+.accountIdentity {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.accountIdentity strong,
+.accountIdentity span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.accountIdentity strong {
+  font-size: 13px;
+}
+
+.accountIdentity span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.menuItem {
+  display: flex;
+  width: 100%;
+  min-height: 40px;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 11px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menuItem:hover,
+.menuItem:focus-visible {
+  background: var(--surface2);
+  outline: none;
+}
+
+.menuItem svg {
+  color: var(--muted);
+}
+
+@media (max-width: 620px) {
+  .brandLogo {
+    width: 38px;
+    height: 44px;
+  }
+
+  .accountPopover {
+    top: calc(100% + 8px);
+  }
+}

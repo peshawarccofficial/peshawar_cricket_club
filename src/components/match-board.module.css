@@ -1,0 +1,56 @@
+.layout{display:grid;gap:28px}
+.create,.requests{background:var(--surface,#fff);border:1px solid var(--line,#e6e9ef);border-radius:20px;padding:24px}
+.create h2,.requests h2{margin:0;color:var(--ink,#102542)}
+.create>p{margin:8px 0 20px;color:var(--muted,#66758a);font-size:.92rem}
+.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.form label,.confirmFields label{display:grid;gap:6px;color:var(--ink,#102542);font-size:.85rem;font-weight:650}
+.form input,.form select,.form textarea,.confirmFields input{width:100%;min-height:44px;border:1px solid var(--line,#d9e0e9);border-radius:10px;padding:9px 11px;background:var(--surface,#fff);color:var(--ink,#102542);font:inherit}
+.form textarea{resize:vertical}
+.form input:focus-visible,.form select:focus-visible,.form textarea:focus-visible,.confirmFields input:focus-visible,.actions button:focus-visible,.reject:focus-visible{outline:3px solid #d4af3780;outline-offset:2px}
+.wide{grid-column:1/-1}
+.sectionHeading{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.sectionHeading h2{font-size:1.55rem}
+.count{display:grid;place-items:center;min-width:36px;height:36px;border-radius:50%;background:#d4af3720;color:#7a5a00;font-weight:750}
+.list{display:grid;gap:14px}
+.card{border:1px solid var(--line,#e6e9ef);border-radius:16px;padding:18px}
+.cardTop{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted,#66758a);font-size:.85rem}
+.card h3{margin:14px 0 6px;color:var(--ink,#102542);font-size:1.2rem}
+.card h3 span{color:var(--muted,#66758a);font-weight:500}
+.details,.notes{margin:0;color:var(--muted,#66758a);font-size:.93rem}
+.notes{margin-top:8px;color:var(--ink,#102542)}
+.actions{display:flex;gap:10px;margin-top:16px}
+.reject{min-height:40px;padding:8px 14px;border:1px solid var(--line,#d9e0e9);border-radius:9px;background:transparent;color:var(--ink,#102542);font:inherit;font-weight:650;cursor:pointer}
+.confirmed{background:#e8f4ec;color:#227340}
+.confirmForm{display:grid;gap:12px;margin-top:18px;padding:14px;border-radius:12px;background:var(--subtle,#f5f7fa)}
+.confirmForm>strong{color:var(--ink,#102542)}
+.confirmForm>p{margin:0;color:var(--muted,#66758a);font-size:.85rem}
+.confirmFields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.confirmedText{margin:16px 0 0;color:#227340;font-weight:650}
+.poll{display:grid;gap:14px;margin-top:16px;padding:15px;border:1px solid var(--line,#d9e0e9);border-radius:13px;background:var(--subtle,#f5f7fa)}
+.pollHeading{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--ink,#102542)}
+.pollHeading span{color:var(--muted,#66758a);font-size:.78rem}
+.pollOutcome{margin:0;color:var(--ink,#102542);font-size:.9rem;font-weight:650}
+.pollCategories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.pollCategory{min-width:0;margin:0;padding:10px;border:1px solid var(--line,#d9e0e9);border-radius:10px;background:var(--surface,#fff)}
+.pollCategory legend{padding:0 4px;color:var(--ink,#102542);font-size:.84rem;font-weight:750}
+.pollOption{display:flex;align-items:center;gap:8px;min-height:34px;color:var(--ink,#102542);font-size:.8rem}
+.pollOption input{width:16px;height:16px;accent-color:#b18419}
+.pollOption span{flex:1}
+.pollOption strong{min-width:22px;text-align:right;color:var(--muted,#66758a)}
+.pollVote,.closePoll{min-height:34px;border:1px solid var(--line,#d9e0e9);border-radius:8px;background:var(--surface,#fff);color:var(--ink,#102542);padding:7px 10px;font:inherit;font-size:.78rem;font-weight:700;cursor:pointer}
+.pollVote{margin-top:8px}
+.pollVote:disabled,.closePoll:disabled{opacity:.55;cursor:not-allowed}
+.closePoll{justify-self:start;background:#d4af3720;border-color:#d4af3780}
+.createPoll{margin-top:15px;border-top:1px solid var(--line,#d9e0e9);padding-top:12px}
+.createPoll summary{color:var(--ink,#102542);font-size:.86rem;font-weight:750;cursor:pointer}
+.createPoll summary:focus-visible,.pollVote:focus-visible,.closePoll:focus-visible{outline:3px solid #d4af3780;outline-offset:2px}
+.pollForm{display:grid;gap:10px;margin-top:12px}
+.pollForm label{display:grid;gap:5px;color:var(--ink,#102542);font-size:.8rem;font-weight:650}
+.pollForm textarea{width:100%;min-height:74px;border:1px solid var(--line,#d9e0e9);border-radius:9px;padding:9px 10px;background:var(--surface,#fff);color:var(--ink,#102542);font:inherit;resize:vertical}
+.pollForm textarea:focus-visible{outline:3px solid #d4af3780;outline-offset:2px}
+.pollForm .voteChange{display:flex;align-items:center;gap:8px}
+.voteChange input{width:16px;height:16px;accent-color:#b18419}
+.empty,.error,.notice{padding:16px;border-radius:12px;background:var(--subtle,#f5f7fa);color:var(--muted,#66758a)}
+.error{background:#fff0f0;color:#a82020}
+.notice{background:#edf7ef;color:#226c38}
+@media(max-width:680px){.create,.requests{padding:18px}.form,.confirmFields,.pollCategories{grid-template-columns:1fr}.wide{grid-column:auto}.cardTop{align-items:flex-start;flex-direction:column}.sectionHeading h2{font-size:1.3rem}.pollHeading{align-items:flex-start;flex-direction:column}}

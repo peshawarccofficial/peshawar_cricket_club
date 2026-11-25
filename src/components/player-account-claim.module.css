@@ -1,0 +1,13 @@
+.card{display:grid;gap:12px;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:var(--shadow)}
+.icon{display:grid;width:44px;height:44px;place-items:center;border-radius:13px;background:#d4af3726;color:#95700b}
+.card h2{margin:0;color:var(--text);font-size:1.15rem}
+.card>p,.hint,.signInPrompt p{margin:0;color:var(--muted);font-size:.87rem;line-height:1.55}
+.form{display:grid;gap:9px}
+.form label{color:var(--text);font-size:.82rem;font-weight:700}
+.form input{min-height:44px;width:100%;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--text);padding:10px;font:inherit}
+.form input:focus-visible{outline:2px solid #d4af37;outline-offset:2px}
+.form button{margin-top:5px}
+.signInPrompt{display:grid;gap:12px;padding:13px;border-radius:10px;background:var(--surface2)}
+.notice,.error{margin:0;padding:10px;border-radius:8px;font-size:.83rem;line-height:1.45}
+.notice{background:#edf7ef;color:#226c38}
+.error{background:#fff0f0;color:#a82020}

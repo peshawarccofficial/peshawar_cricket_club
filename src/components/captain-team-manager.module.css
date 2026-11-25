@@ -1,0 +1,35 @@
+.manager{display:grid;gap:14px;padding-top:18px;border-top:1px solid var(--line)}
+.heading{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.heading h3{margin:4px 0;font:700 17px Manrope,sans-serif}
+.heading p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.count{flex:none;padding:6px 9px;border-radius:20px;background:var(--surface2);color:var(--text);font-size:11px;font-weight:800}
+.viceCaptain{display:grid;gap:6px;max-width:380px;color:var(--text);font-size:11px;font-weight:800}
+.viceCaptain select,.fields input,.fields select{width:100%;min-height:38px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);padding:8px;font:inherit;font-size:11px}
+.playerList{display:grid;gap:10px}
+.playerCard,.addForm{display:grid;gap:11px;padding:13px;border:1px solid var(--line);border-radius:12px;background:var(--surface2)}
+.playerTitle{display:flex;justify-content:space-between;gap:10px;color:var(--text);font-size:11px}
+.playerTitle span{color:var(--muted)}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.fields label{display:grid;gap:5px;color:var(--muted);font-size:10px;font-weight:700}
+.photoField input{padding:6px}
+.visibility{display:flex!important;align-items:center;gap:7px!important}
+.visibility input{width:16px;height:16px;min-height:0;accent-color:#18845b}
+.actions{display:flex;gap:8px}
+.save,.remove{min-height:34px;border-radius:8px;padding:7px 10px;font-size:10px;font-weight:800;cursor:pointer}
+.save{border:0;background:#18845b;color:#fff}
+.remove{border:1px solid #e6b9bc;background:var(--surface);color:#b24c54}
+.save:disabled,.remove:disabled{opacity:.55;cursor:not-allowed}
+.accountAccess{display:grid;gap:7px;padding:10px;border:1px solid var(--line);border-radius:9px;background:var(--surface)}
+.inviteButton,.inviteDetails button{justify-self:start;min-height:32px;border:1px solid var(--line);border-radius:7px;background:var(--surface2);color:var(--text);padding:6px 9px;font:inherit;font-size:10px;font-weight:800;cursor:pointer}
+.inviteButton:disabled{opacity:.55;cursor:wait}
+.inviteDetails{display:grid;gap:7px}
+.inviteDetails code{padding:9px;border-radius:6px;background:var(--surface2);color:var(--text);overflow-wrap:anywhere;user-select:all;font-size:10px}
+.inviteDetails small{color:var(--muted);font-size:10px;line-height:1.5}
+.accountActive,.accountSuspended{margin:0;color:#17744f;font-size:10px;font-weight:750}
+.accountSuspended{color:#a52e38}
+.addForm h4{margin:0;font-size:13px}
+.notice,.error,.empty{margin:0;padding:10px;border-radius:8px;font-size:11px;line-height:1.5}
+.notice{background:#e6f5ee;color:#17744f}
+.error{background:#fff0f0;color:#a52e38}
+.empty{color:var(--muted);text-align:center}
+@media(max-width:540px){.fields{grid-template-columns:1fr}.heading{flex-direction:column}.actions button{flex:1}}

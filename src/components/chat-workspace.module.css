@@ -1,0 +1,43 @@
+.workspace{display:grid;grid-template-columns:minmax(230px,.75fr) minmax(0,1.5fr);min-height:570px;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}
+.sidebar{display:flex;flex-direction:column;gap:8px;padding:17px;border-right:1px solid var(--line);background:var(--surface2)}
+.sidebarHeading{display:flex;align-items:center;gap:8px;padding:4px 3px 11px;color:var(--text)}
+.sidebarHeading h2{margin:0;font-size:1.05rem}
+.conversation,.activeConversation{display:grid;gap:5px;width:100%;padding:11px;border:1px solid transparent;border-radius:11px;background:transparent;color:var(--text);text-align:left;cursor:pointer}
+.activeConversation{border-color:var(--line);background:var(--surface)}
+.conversation strong,.activeConversation strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.88rem}
+.conversation span,.activeConversation span{overflow:hidden;color:var(--muted);text-overflow:ellipsis;white-space:nowrap;font-size:.77rem}
+.hint{margin:5px 0;color:var(--muted);font-size:.82rem;line-height:1.5}
+.actions{display:grid;gap:6px;margin-top:13px;padding-top:12px;border-top:1px solid var(--line)}
+.actions h3{margin:0 0 3px;color:var(--muted);font-size:.76rem;text-transform:uppercase;letter-spacing:.06em}
+.actions button{display:flex;align-items:center;gap:7px;min-height:36px;border:0;border-radius:8px;background:transparent;color:var(--text);padding:7px;font:inherit;font-size:.82rem;text-align:left;cursor:pointer}
+.actions button:hover{background:var(--surface)}
+.actions button:disabled{opacity:.55;cursor:wait}
+.chat{display:flex;min-width:0;flex-direction:column}
+.chatHeader{padding:17px 20px;border-bottom:1px solid var(--line)}
+.chatHeader h2{margin:4px 0 0;color:var(--text);font-size:1.1rem}
+.messages{display:flex;flex:1;flex-direction:column;gap:10px;overflow:auto;min-height:300px;max-height:520px;padding:17px}
+.ownMessage,.otherMessage{max-width:min(82%,540px);padding:10px 12px;border-radius:12px}
+.ownMessage{align-self:flex-end;background:#071b36;color:#fff}
+.otherMessage{align-self:flex-start;border:1px solid var(--line);background:var(--surface2);color:var(--text)}
+.ownMessage strong,.otherMessage strong{font-size:.78rem}
+.ownMessage p,.otherMessage p{margin:4px 0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5}
+.ownMessage time,.otherMessage time{display:block;color:inherit;opacity:.68;font-size:.68rem}
+.reportButton,.reported{display:inline-block;margin-top:6px;color:var(--muted);font-size:.7rem}
+.reportButton{border:0;background:transparent;padding:0;text-decoration:underline;cursor:pointer}
+.reportButton:focus-visible,.reportForm button:focus-visible{outline:2px solid #d4af37;outline-offset:2px}
+.reportForm{display:grid;gap:6px;margin-top:8px;font-size:.72rem}
+.reportForm label{font-weight:650}
+.reportForm textarea{width:100%;resize:vertical;min-height:44px;padding:7px;border:1px solid var(--line);border-radius:7px;background:var(--surface);color:var(--text);font:inherit}
+.reportForm span{display:flex;gap:8px}
+.reportForm button{border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--text);padding:5px 8px;font:inherit;cursor:pointer}
+.reportForm button:disabled{opacity:.55;cursor:wait}
+.emptyMessages,.noConversation p{color:var(--muted);text-align:center}
+.noConversation{display:grid;flex:1;align-content:center;justify-items:center;gap:8px;padding:25px;color:var(--muted);text-align:center}
+.noConversation h2,.noConversation p{margin:0}
+.noConversation h2{color:var(--text);font-size:1.1rem}
+.composer{display:flex;align-items:flex-end;gap:10px;padding:14px 17px;border-top:1px solid var(--line)}
+.composer textarea{flex:1;resize:vertical;min-height:48px;max-height:140px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text);font:inherit}
+.composer button{min-width:46px;min-height:46px;padding:0}
+.notice,.error{margin:10px 17px 0;padding:10px;border-radius:9px;background:#edf7ef;color:#226c38;font-size:.85rem}
+.error{background:#fff0f0;color:#a82020}
+@media(max-width:760px){.workspace{grid-template-columns:1fr;min-height:unset}.sidebar{max-height:280px;overflow:auto;border-right:0;border-bottom:1px solid var(--line)}.messages{min-height:280px;max-height:60vh}}
