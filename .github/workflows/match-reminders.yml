@@ -1,0 +1,30 @@
+name: Match reminders
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Invoke protected reminder endpoint
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          REMINDER_ENDPOINT: ${{ secrets.REMINDER_ENDPOINT }}
+        run: |
+          if [ -z "$CRON_SECRET" ] || [ -z "$REMINDER_ENDPOINT" ]; then
+            echo "CRON_SECRET and REMINDER_ENDPOINT repository secrets are required."
+            exit 1
+          fi
+
+          curl --fail-with-body --silent --show-error \
+            --max-time 30 \
+            --header "Authorization: Bearer ${CRON_SECRET}" \
+            --header "Accept: application/json" \
+            "$REMINDER_ENDPOINT"
